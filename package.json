@@ -1,0 +1,19 @@
+{
+  "name": "rest_service",
+  "version": "1.0.0",
+  "description": "CRUD operation on JSON dataset",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vedz91/redhat_1.git"
+  },
+  "author": "Vedz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vedz91/redhat_1/issues"
+  },
+  "homepage": "https://github.com/vedz91/redhat_1#readme"
+}
