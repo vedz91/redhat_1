@@ -21,14 +21,6 @@ router.get('/', function(req, res, next) {
         res.json(users);
     })
 });
-//
-// /* saves a user */
-// router.post('/', function(req, res, next) {
-//     Users.create(req.body, function (err, post) {
-//         if (err) return next(err);
-//         res.json(post);
-//     });
-// });
 
 /* load user by reg no */
 router.get('/:regId', function(req, res, next) {

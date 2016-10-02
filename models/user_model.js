@@ -50,6 +50,9 @@ module.exports = {
     },
     list: function (cb) {
         cb(null, this.users) ;
+    },
+    search: function (query, cb) {
+        return cb(null, _.where(this.users, query))
     }
 
 }
