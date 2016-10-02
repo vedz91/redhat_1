@@ -28,10 +28,6 @@ app.get('/', function (req, res) {
 
 // Middleware for sanitizing request query
 app.use(function(req, res, next) {
-    //Convert to Int
-    req.sanitizeQuery('registered').toInt();
-    req.sanitizeQuery('dob').toInt();
-
     var query = {}
     for (var key in req.query)
     {
@@ -42,6 +38,11 @@ app.use(function(req, res, next) {
         query[key.toLowerCase()] = req.query[key];
     }
     req.query = query;
+
+    //Convert to Int
+    req.sanitizeQuery('registered').toInt();
+    req.sanitizeQuery('dob').toInt();
+
     next();
 });
 
