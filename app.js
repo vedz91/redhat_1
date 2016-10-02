@@ -16,14 +16,6 @@ app.listen(3001, function () {
     console.log('listening on port 3001!');
 });
 
-// var mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/part1', function(err) {
-//     if(err) {
-//         console.log('connection error', err);
-//     } else {
-//         console.log('connection successful');
-//     }
-// });
 
 /**
  * GET /
