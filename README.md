@@ -67,6 +67,13 @@ To run project localy, go to main project folder and execute 'app.js' from comma
 node app.js
 ```
 
+####Test
+To test functionality of endpoints run:
+
+```
+mocha
+```
+
 ####Environments
 *local
     *localhost:3001
