@@ -26,7 +26,7 @@ app.get('/', function (req, res) {
     res.send("HEY Yeah!")
 });
 
-// Middleware for sanitizing request query
+// Middleware for handling the case of request query
 app.use(function(req, res, next) {
     var query = {}
     for (var key in req.query)
@@ -39,7 +39,16 @@ app.use(function(req, res, next) {
     }
     req.query = query;
 
-    //Convert to Int
+    next();
+});
+
+// Middleware for sanitizing and validating request query
+app.use(function(req, res, next) {
+
+    //validation (as per requirement)
+    //req.checkQuery('', 'Invalid param registered').isInt();
+
+    //Sanitization of request query
     req.sanitizeQuery('registered').toInt();
     req.sanitizeQuery('dob').toInt();
 
