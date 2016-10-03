@@ -8,7 +8,6 @@ var user_json = require('../resource/users.json'),
 module.exports = {
     users: user_json.users,
     save: function () {
-        console.log('here')
         jsonfile.writeFile('./resource/users.json', {users:this.users}, {spaces: 2}, function(err) {
             console.error(err)
         })

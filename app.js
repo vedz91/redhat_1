@@ -16,7 +16,7 @@ app.use(expressValidator());
 
 
 //server initialize
-app.listen(3001, function () {
+var server = app.listen(3001, function () {
     console.log('listening on port 3001!');
 });
 
@@ -91,6 +91,11 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
+
+module.exports = {
+    server : server,
+    app : app
+};
 
 
 
