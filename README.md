@@ -1,4 +1,4 @@
-# redhat_1
+# REST Service
 REST service for basic CRUD operation on JSON dataset
 
 Routes
